@@ -15,13 +15,19 @@ L’As vaut 1 point ou 11 points, au choix du joueur
 
 
 MVP: 
-Attribution de deux cartes au joueur et au croupier et le joueur peut piocher ou changer ses cartes si il le veut.  
-Puis le proche de 21 sans dépasser cette somme l'emporte  
+Attribution de deux cartes au joueur et au croupier et le joueur peut piocher ou changer ses cartes s'il le veut.  
+Le plus proche de 21 et sans depasser cette somme l'emporte
+Mode console
 
-Liste des fonction:
--Attribution des valeurs de point aux cartes
+Liste des fonctions:  
+-Attribution des valeurs de points aux cartes  
 -Reception des cartes pour le joueur et le croupier
 -Score  totale du joueur et du croupier
-Si il y a le meme résultat = égalité
+-Interaction avec le joueur: Choix du joueur (stop, piocher, refaire)
+-Séquence de jeu du croupier
+Si il y a le meme résultat = *
 Sinon le plus proche de 21 sans dépasser 21 .
+
+Structues de données:
+- Valeurs des cartes:
 
