@@ -25,9 +25,9 @@ Liste des fonctions:
 -Score  totale du joueur et du croupier
 -Interaction avec le joueur: Choix du joueur (stop, piocher, refaire)
 -Séquence de jeu du croupier
-Si il y a le meme résultat = *
 Sinon le plus proche de 21 sans dépasser 21 .
 
 Structues de données:
-- Valeurs des cartes:
+- Valeurs des cartes: Création d'une liste pour mettre les numéros et la couleurs des cartes   
+- 
 
