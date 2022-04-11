@@ -3,16 +3,16 @@ from random import *   #pour indiquer qu'on fait intervenir des valeurs au hasar
 prenom = input("Bienvenue dans le jeu Black jack, Entrez votre prénom : ")
 print ("Bonjour,", prenom)
 print()
-#----------------------------------- (1) : Création d'une liste --------------------------------------
+
 valeur = [ 'AS', '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' ,'Valet','Dame','Roi']
 couleur = [' de Carreau  ',' de Pique ',' de Trèfle ',' de Coeur']
 list = []
 
-#----------------------------------- (2) : Mise du joueurs --------------------------------------------
+#----------------------------------- (1) : Mise du joueurs --------------------------------------------
 
-mise_1 = int(input("Mise d'argent du  joueur (en e) :"))
+mise_1 = int(input("Mise d'argent du  joueur (en €) :"))
 
-# ---------------------------------(3) : Valeure des cartes--------------------------------------------
+# ---------------------------------(2) : Valeure des cartes--------------------------------------------
 
 def score(carte) :
 
@@ -46,7 +46,7 @@ def score(carte) :
         return int(10)
 
 
-#-------------------------------- (4) : Reception des cartes--------------------------------------------
+#-------------------------------- (3) : Reception des cartes--------------------------------------------
 
 print("Chaque joueur recoit 2 Cartes !" )
 print("Commencons par le Croupier")
@@ -87,7 +87,7 @@ print(carte2_j1)
 total_cartes_j1 = score(carte1_j1) + score(carte2_j1)
 print(prenom ,", votre score est de ",total_cartes_j1)
 print()
-# --------------------------------------(5) : Addition des cartes-----------------------------------------
+# --------------------------------------(4) : Addition des cartes-----------------------------------------
 
 nvlle_carte = input(" Quel est votre choix :'tirer carte'=1 , 'Main satisaisante' =2 ou 'Doubler la mise  =3 ?")
 total_cartes2_Croupier = total_cartes_Croupier
@@ -112,10 +112,10 @@ if nvlle_carte == "1" :
     print(prenom," Voici votre nouveau score :" , total_cartes2_j1)
     print()
 
-if nvlle_carte == "2" :
-            total_cartes2_j1 = total_cartes_j1
-            print()
-            print(prenom,"Voici votre nouveau score : ",total_cartes2_j1)
+if nvlle_carte == "2":
+    total_cartes2_j1 = total_cartes_j1
+    print()
+    print(prenom,"Voici votre nouveau score : ",total_cartes2_j1)
 
 if nvlle_carte == "3" :
     carte3_j1 = sample (valeur,1) + sample (couleur,1)
@@ -125,53 +125,49 @@ if nvlle_carte == "3" :
     print()
     print(prenom," Voici votre nouveau score :" , total_cartes2_j1)
 
-# ----------------------------(6) : Qui est le vainqueur ?-------------------------------------------
+# ----------------------------(5) : Qui est le vainqueur ?-------------------------------------------
 
                 # A-A propos du Black Jack
+jeu_continue = True
+while jeu_continue :
 
-while 1 :
-
- if total_cartes2_j1 == 21 :
+    if total_cartes2_j1 == 21 :
             print()
             print('Blackjack!', prenom , 'a remporter la partie, voici votre argent : ' , mise_1*2 , 'e')
-            break
- if total_cartes2_Croupier == 21 :
+            jeu_continue = False
+    if total_cartes2_Croupier == 21 :
             print()
             print('Blackjack!, Le Croupier remporte la partie ! et vous perdez ')
-            break
+            jeu_continue = False
 
                 # B-L'egalite
 
- if total_cartes2_j1 ==  total_cartes2_Croupier :  # En cas d'egalite, Pour La somme final du croupier
-  print()
-  print('Score nul, Personne ne gagne !!!! ')
-  break
+    if total_cartes2_j1 ==  total_cartes2_Croupier :  # En cas d'egalite, Pour La somme final du croupier
+        print()
+        print('Score nul, Personne ne gagne !!!! ')
+        jeu_continue = False
 
- if total_cartes_2_j2 ==  total_cartes_Croupier:# Pour la premiere somme du croupier
-  print()
-  print('Personne gagne !!!! ')
-  break
 
                # C-Score le plus elevee, inferieur a 21
 
- if 21 > total_cartes2_Croupier > total_cartes2_j1 :
-    print()
-    print("Croupier ",total_cartes2_Croupier, " est superieur a vous",total_cartes2_j1)
-    print("Croupier Gagne!!")
-    break
+    if 21 > total_cartes2_Croupier > total_cartes2_j1 :
+        print()
+        print("Croupier ",total_cartes2_Croupier, " est superieur a vous",total_cartes2_j1)
+        print("Croupier Gagne!!")
+        jeu_continue = False
 
- if 21 > total_cartes2_j1 > total_cartes2_Croupier:
-    print()
-    print("Vous etes superieur avec",total_cartes2_j1," a ", total_cartes2_Croupier)
-    print("Vous gagnez, " , mise_1*2 ,'euros')
-    print("fin iiiiiii")
-    break
+    if 21 > total_cartes2_j1 > total_cartes2_Croupier:
+        print()
+        print("Vous etes superieur avec",total_cartes2_j1," a ", total_cartes2_Croupier)
+        print("Vous gagnez, " , mise_1*2 ,'euros')
+        print("fin Bravo")
+        jeu_continue = False
 
- if total_cartes2_Croupier > 21:
-    print('Croupier PERD , Vous gagnez!')
-    break
+    if total_cartes2_Croupier > 21:
+        print('Croupier PERD , Vous gagnez!')
+        jeu_continue = False
 
- if total_cartes2_j1 > 21 :
-    print('Vous depassez 21 , vous perdez !')
-    print("Vous perdez", mise_1, "euros, Croupier remporte la partie")
-    break
+    if total_cartes2_j1 > 21 :
+        print('Vous depassez 21 , vous perdez !')
+        print("Vous perdez", mise_1, "euros, Croupier remporte la partie")
+        jeu_continue = False
