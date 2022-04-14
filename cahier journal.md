@@ -1,9 +1,33 @@
-Jour 1: Création d'un Github(régle du jeux) et présentation de mon projet(Blackjack)
+**Jour1**
 
-Jour 2: Définition d'un MVP dans mon Github et précision des listes de fonction
+-Création d'un Github(régle du jeux) 
+-présentation de mon projet(Blackjack)
+__________________________________________________________________________________________________
+**Jour2**
 
-Jour 3: Début du code (création d'une liste et la mise des score sur chacunes des cartes)
+-Définition d'un MVP dans mon Github 
+-précision des listes de fonction
+__________________________________________________________________________________________________
 
-Jour 4: Suite du code (Pour la reception des cartes).J'ai trouvé de l'aide sur internet pour pouvoir distribuer les cartes.
+**Jour3**
 
-Jour 5 : Organisation des differents repertoires , spécification complétées et continuation du code (Probléme : demander au prof)
+-Début du code (création d'une liste 
+-la mise des score sur chacunes des cartes)
+__________________________________________________________________________________________________
+
+**Jour4**
+
+-Suite du code (Pour la reception des cartes)
+-J'ai trouvé de l'aide avec mon frére.
+__________________________________________________________________________________________________
+
+**Jour5**
+
+-Organisation des differents repertoires 
+-spécification complétées 
+-continuation du code (Probléme : demander au prof)
+__________________________________________________________________________________________________
+**Jour6**
+
+-Continuation du journal
+-Finition du code(mode console)
