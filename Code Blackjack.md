@@ -1,4 +1,23 @@
-from random import *   #pour indiquer qu'on fait intervenir des valeurs au hasard, (d'ou le random=hasard)
+from random import *#pour indiquer qu'on fait intervenir des valeurs au hasard, (d'ou le random=hasard)
+from tkinter import*
+
+def score(carte:list) -> int:
+    """ Prend une liste de carte e nparamètrre. Les cartes sont décrites par une chaïne de caractères.
+        Exemple: 'AS', '0', 'Valet' ...
+        Renvoie la valeur en points associée
+    """
+    if carte[0] == '0' :
+        return 0
+    elif carte[0] == 'AS' :
+        AS = input("Une carte AS a ete tiree , quel valeure lui attribuer, 1 ou 11 ?")
+        if AS == '1' :
+            return 1
+        else :
+            return 11
+    elif carte[0] in ('10' , 'Valet' , 'Dame' , 'Roi'):
+        return 10
+    else:
+        return int(carte[0])
 
 prenom = input("Bienvenue dans le jeu Black jack, Entrez votre prénom : ")
 print ("Bonjour,", prenom)
@@ -14,36 +33,16 @@ mise_1 = int(input("Mise d'argent du  joueur (en €) :"))
 
 # ---------------------------------(2) : Valeure des cartes--------------------------------------------
 
-def score(carte) :
+tk = Tk()
+tk.title('Black Jack')
 
-    if carte[0] == '0' :
-        return int(0)
-    elif carte[0] == 'AS' :
-        AS = input("Une carte AS a ete tiree , quel valeure lui attribuer, 1 ou 11 ?")
-        if AS == '1' :
-            return int(1)
-        else :
-            return int(11)
-    elif carte[0] == '1':
-        return int(1)
-    elif carte[0] == '2':
-        return int(2)
-    elif carte[0] == '3':
-        return int(3)
-    elif carte[0] == '4':
-        return int(4)
-    elif carte[0] == '5':
-        return int(5)
-    elif carte[0] == '6':
-        return int(6)
-    elif carte[0] == '7':
-        return int(7)
-    elif carte[0] == '8':
-        return int(8)
-    elif carte[0] == '9':
-        return int(9)
-    elif carte[0] in ('10' , 'Valet' , 'Dame' , 'Roi'):
-        return int(10)
+photo = PhotoImage(file="Tapis.png")
+Canevas = Canvas(tk,width = Largeur, height =Hauteur)
+
+# Lancement de la «boucle principale»
+tk.mainloop()
+
+
 
 
 #-------------------------------- (3) : Reception des cartes--------------------------------------------
