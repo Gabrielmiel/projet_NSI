@@ -11,8 +11,8 @@ ________________________________________________________________________________
 
 **Jour3**:Samedi 9 avril  
 
--Début du code (création d'une liste   
--la mise des score sur chacunes des cartes)  
+-Début du code (création d'une liste)   
+-la mise des score sur chacunes des cartes  
 __________________________________________________________________________________________________
 
 **Jour4**: Jeudi 14 avril
@@ -25,7 +25,7 @@ ________________________________________________________________________________
 
 -Organisation des differents repertoires   
 -spécification complétées   
--continuation du code (Probléme : demander au prof)  
+-continuation du code (Probléme : demander au prof et forum)  
 __________________________________________________________________________________________________
 **Jour6**: Vendredi 29 avril
 
