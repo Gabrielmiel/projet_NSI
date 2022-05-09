@@ -1,3 +1,4 @@
+""" Aidee par mon grand frere et un forum """
 from random import *#pour indiquer qu'on fait intervenir des valeurs au hasard, (d'ou le random=hasard)
 from tkinter import*
 
@@ -6,6 +7,7 @@ def score(carte:list) -> int:
         Exemple: 'AS', '0', 'Valet' ...
         Renvoie la valeur en points associée
     """
+# ---------------------------------(1) : Valeure des cartes--------------------------------------------
     if carte[0] == '0' :
         return 0
     elif carte[0] == 'AS' :
@@ -27,22 +29,9 @@ valeur = [ 'AS', '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' ,'Valet','
 couleur = [' de Carreau  ',' de Pique ',' de Trèfle ',' de Coeur']
 list = []
 
-#----------------------------------- (1) : Mise du joueurs --------------------------------------------
+#----------------------------------- (2) : Mise du joueurs --------------------------------------------
 
 mise_1 = int(input("Mise d'argent du  joueur (en €) :"))
-
-# ---------------------------------(2) : Valeure des cartes--------------------------------------------
-
-tk = Tk()
-tk.title('Black Jack')
-
-photo = PhotoImage(file="Tapis.png")
-Canevas = Canvas(tk,width = Largeur, height =Hauteur)
-
-# Lancement de la «boucle principale»
-tk.mainloop()
-
-
 
 
 #-------------------------------- (3) : Reception des cartes--------------------------------------------
@@ -76,7 +65,59 @@ print()
 carte1_j1= sample (valeur,1)+sample (couleur,1)
 print(prenom , "voici votre premiere carte : ")
 print(carte1_j1)
+from random import *#pour indiquer qu'on fait intervenir des valeurs au hasard, (d'ou le random=hasard)
+from tkinter import*
 
+def score(carte:list) -> int:
+    """ Prend une liste de carte e nparamètrre. Les cartes sont décrites par une chaïne de caractères.
+        Exemple: 'AS', '0', 'Valet' ...
+        Renvoie la valeur en points associée
+    """
+# ---------------------------------(1) : Valeure des cartes--------------------------------------------
+    if carte[0] == '0' :
+        return 0
+    elif carte[0] == 'AS' :
+        AS = input("Une carte AS a ete tiree , quel valeure lui attribuer, 1 ou 11 ?")
+        if AS == '1' :
+            return 1
+        else :
+            return 11
+    elif carte[0] in ('10' , 'Valet' , 'Dame' , 'Roi'):
+        return 10
+    else:
+        return int(carte[0])
+
+prenom = input("Bienvenue dans le jeu Black jack, Entrez votre prénom : ")
+print ("Bonjour,", prenom)
+print()
+
+valeur = [ 'AS', '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' ,'Valet','Dame','Roi']
+couleur = [' de Carreau  ',' de Pique ',' de Trèfle ',' de Coeur']
+list = []
+
+#----------------------------------- (2) : Mise du joueurs --------------------------------------------
+
+mise_1 = int(input("Mise d'argent du  joueur (en €) :"))
+
+
+#-------------------------------- (3) : Reception des cartes--------------------------------------------
+
+print("Chaque joueur recoit 2 Cartes !" )
+print("Commencons par le Croupier")
+print()   # pour faire des espaces (aerer)
+
+
+                # A-Croupier
+
+# Reception de la premiere Carte (Croupier)
+carte1_Croupier= sample (valeur,1)+ sample (couleur,1)  #"sapmle" est une fonction du random, pour tirer une valeur au hasard, parmi la liste proposee
+print("Croupier, Voici votre premiere carte : ")
+print(carte1_Croupier)
+
+# Reception de la deuxieme carte (Croupier)
+carte2_Croupier = sample (valeur,1) + sample (couleur,1)
+print("Voici la seconde : ")
+print(carte2_
 # Reception de la deuxieme carte (joueur1)
 carte2_j1 = sample (valeur,1) + sample (couleur,1)
 print("Voici la seconde carte : ")
